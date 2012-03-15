@@ -21,8 +21,8 @@ It will receive an event from a client at most every 5 seconds. If the client do
 
     <MAC address>|<keypress count>
 
-# TODO Get this working on Apple OS X
-# TODO Decode key pressed, and send character combination instead
-# TODO Weigh keys distance from the home row and send value along with character
-# TODO Record mouse clicks
-# TODO Rewrite this key capture as editor specific plugin (ViM, Emacs, Gedit, ST2, etc)
+* TODO Get this working on Apple OS X
+* TODO Decode key pressed, and send character combination instead
+* TODO Weigh keys distance from the home row and send value along with character
+* TODO Record mouse clicks
+* TODO Rewrite this key capture as editor specific plugin (ViM, Emacs, Gedit, ST2, etc)
