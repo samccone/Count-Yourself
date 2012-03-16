@@ -31,9 +31,6 @@ It will receive an event from a client at most every 5 seconds. If the client do
     <MAC address>|<keypress count>
 
 * TODO Get this working on Apple OS X 
-	* with probably use kqueue/kevent - 
-	* https://github.com/gorakhargosh/watchdog
-	* http://code.google.com/p/logkext/
 	* http://danielbeard.wordpress.com/2010/10/29/listening-for-global-keypresses-in-osx/
 * TODO Decode key pressed, and send character combination instead
 * TODO Weigh keys distance from the home row and send value along with character
