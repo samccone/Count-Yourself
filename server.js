@@ -4,16 +4,17 @@ var http = require('http');
 
 var server = net.createServer(function (s) {
 	s.setEncoding('utf8');
-	s.on('data',function(d){
-		if(presses[d]){
-			presses[d]+=1;
-		} else {
-			presses[d]=1;
-		}
-	});
-
+	s.on('data',processData);
 });
 
+function processData(d){
+	var parsed = d.split('|');
+	if(presses[parsed[0]]){
+		presses[parsed[0]] += parseInt(parsed[1],10);
+	} else {
+		presses[parsed[0]] = parseInt(parsed[1],10);
+	}
+}
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
