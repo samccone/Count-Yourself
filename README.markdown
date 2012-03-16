@@ -32,6 +32,7 @@ It will receive an event from a client at most every 5 seconds. If the client do
 
 * TODO Get this working on Apple OS X 
 	* http://danielbeard.wordpress.com/2010/10/29/listening-for-global-keypresses-in-osx/
+	* modify osx_logger.c to accept an input param that contains the MAC address.  then client.sh can call it with the MAC
 * TODO Decode key pressed, and send character combination instead
 * TODO Weigh keys distance from the home row and send value along with character
 * TODO Record mouse clicks
