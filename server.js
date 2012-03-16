@@ -9,10 +9,16 @@ var server = net.createServer(function (s) {
 
 function processData(d){
 	var parsed = d.split('|');
-	if(presses[parsed[0]]){
-		presses[parsed[0]] += parseInt(parsed[1],10);
+	var count = parseInt(parseInt(parsed[1],10),10);
+	var obj	= presses[parsed[0]];
+	if(obj){
+		obj.total += count;
+		obj.step.push(count);
 	} else {
-		presses[parsed[0]] = parseInt(parsed[1],10);
+		presses[parsed[0]] = {
+			total : count,
+			step : [count]
+		};
 	}
 }
 
@@ -20,7 +26,7 @@ http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   var response = "<h1>Key Count!</h1>";
   for(p in presses){
-  	response += "<p>"+p + " -- " + presses[p] + "</p>";
+  	response += "<p>"+p + " -- " + presses[p].total + "</p>";
   }
   res.end(response);
 }).listen(1337, '127.0.0.1');
