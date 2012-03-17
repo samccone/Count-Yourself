@@ -5,6 +5,7 @@
   , "dependencies": {
       "supervisor": ">= 0.0.1",
       "express": ">= 1.8.6",
-      "socket.io": ">= 0.9.2"
+      "socket.io": ">= 0.9.2",
+      "jade": "0.21.0"
   }
 }
