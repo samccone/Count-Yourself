@@ -9,7 +9,7 @@ webServer.configure(function(){
 });
 
 webServer.get( '/', function( req, res ){
-	res.send(JSON.stringify(data()));
+	res.render('home');
 });
 
 function startServer(args){
