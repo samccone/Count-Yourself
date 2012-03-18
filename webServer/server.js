@@ -8,6 +8,7 @@ webServer.configure(function(){
 	webServer.set("view engine","jade");
 	webServer.set('views', __dirname + '/views');
 	webServer.set('views');
+	webServer.use(express.static(__dirname + '/public'));
 });
 
 webServer.get( '/', function( req, res ){
