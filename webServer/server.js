@@ -20,13 +20,12 @@ io.on('connection',addConnection);
 
 function addConnection(s){
 	connections[s.id] = s;
-	s.on('disconnect',function(s){
+	s.on('disconnect',function(){
 		delete connections[s.id];
 	});
 }
 
 function sendDataUpdates(data){
-	console.log("new data");
 	for(c in connections){
 		connections[c].emit('message',data);
 	}
