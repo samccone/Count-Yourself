@@ -18,5 +18,5 @@ c.on('connect',function(){
 function sendMessage(){
 	var count = Math.floor(Math.random() * 301);
 	connected && c.write(id+"|"+count);
-	setTimeout(sendMessage,5000);
+	setTimeout(sendMessage,2000);
 }
