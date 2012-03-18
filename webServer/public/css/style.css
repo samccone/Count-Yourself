@@ -1,0 +1,11 @@
+body {
+	background: url('/images/bg.png');
+}
+
+.chart {
+	display: block;
+}
+.chart rect {
+   fill: steelblue;
+   stroke: white;
+}
